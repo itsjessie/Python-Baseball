@@ -27,4 +27,4 @@ identifiers.columns = ['game_id','year']
 #what am I doing here?
 games = pd.concat([games, identifiers], axis=1, sort= False)
 games = games.fillna(' ')
-print (games)
+print (games.head())
