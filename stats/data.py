@@ -15,7 +15,7 @@ for x in game_files:
 games= pd.concat(game_frames)
 #print (games)
 #.loc?
-games.loc[games['multi5']== '??', 'multi5'] = ' '
+games.loc[games['multi5']== '??', 'multi5'] = ''
 
 #what on earth does the .extract (???) mean? is it extracting from 'multi2'?
 identifiers =games['multi2'].str.extract(r'(.LS(\d{4})\d{5})')
