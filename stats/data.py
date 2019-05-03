@@ -7,8 +7,8 @@ game_files.sort()
 
 #how do i know game_file is a single file in game_files?
 game_frames=[]
-for x in game_files:
-    game_frame = pd.read_csv(x, names = ['type','multi2','multi3','multi4','multi5','multi6','event'])
+for game_file in game_files:
+    game_frame = pd.read_csv(game_file, names = ['type','multi2','multi3','multi4','multi5','multi6','event'])
     game_frames.append(game_frame)
 
 
