@@ -34,10 +34,9 @@ In one line of code, group the hits DataFrame by inning and hit_type,
  and then reset the index of the resulting DataFrame.
 '''
 
-hits = hits.groupby(['inning','hit_type']).size()
-
+hits = hits.groupby(['inning','hit_type']).size().reset_index(name= 'count')
 #how does it know the reset_index is the size()?
-hits = hits.reset_index(name= 'count')
+#hits = hits.reset_index(name= 'count')
 
 #print (hits)
 
