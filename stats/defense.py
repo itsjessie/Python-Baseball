@@ -46,7 +46,7 @@ events.columns = ['year', 'game_id', 'team', 'BB', 'E', 'H', 'HBP', 'HR', 'ROE',
 
 #remove the label of the index using rename_axis().
 # Pass in a label of None and make sure it is on the columns axis.
-events= events.rename_axis('None')
+events= events.rename_axis(['None'])
 
 events_plus_pa= pd.merge(events, pa, how='outer',
                          left_on=['year', 'game_id','team'],right_on=['year', 'game_id','team'])
