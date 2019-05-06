@@ -42,8 +42,8 @@ hits = hits.groupby(['inning','hit_type']).size().reset_index(name= 'count')
 
 hits['hit_type']= pd.Categorical(hits['hit_type'], ['single', 'double', 'triple', 'hr'])
 
-#sort_values need parameter 'by=[column1, column2, ...]'
-hits= hits.sort_values(by=['inning','hit_type'])
+#sort_values need parameter 'by=[column1, column2, ...]', 'by=' is optional
+hits= hits.sort_values(['inning','hit_type'])
 #print (hits)
 
 hits= hits.pivot(index='inning', columns='hit_type',values='count')
